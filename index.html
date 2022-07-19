@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+    <meta name="author" content="">
+	<title>Document</title>
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+	<style type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+	.container_acronis {
+		max-width: 1200px;
+		/*height: 100vh;*/
+		margin:0 auto;
+		padding:0 10px;
+		/*background-color: #ccc;*/
+	}
+
+	.top_banner {
+		background-image: url(http://download.t-tech.com.tw/userfiles/27760799/image/bgtop.gif);
+		background-size: cover;
+		background-repeat: no-repeat;
+        background-position: center;
+		height: auto;
+		padding-bottom: 10px;
+	}
+
+	.titlewrap{
+		display: flex;
+		justify-content: center;
+	}
+
+	.top_banner .wrap {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: center;
+		align-items: flex-end;
+	}
+
+	.top_banner .wrap img {
+
+	}
+
+	.title-border {
+		display: inline-block;
+		border:1px solid #144a74;
+		border-radius: 5px;
+		background-color: #144a74;
+		font-size: 22px;
+		color: yellow;
+		padding: 6px 16px;
+	}
+
+	/* Right Image */
+	.right-image {
+		margin-top: 100px;
+	}
+
+	.right-image .wrap {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-around;
+	}
+
+	.right-image .left-content {
+		margin-right: 15px;
+	}
+
+	.right-image h4 {
+		margin-bottom: 30px;
+	}
+
+	.right-image p {
+		font-size: 18px;
+		line-height: 40px;
+		color: #595757;
+	}
+	.right-image img {
+	    max-width: 250px !important;
+	    width: 100% !important;
+        height: auto !important;
+        margin-bottom: 20px;
+	}
+	.wrapicon {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 0 50px;
+	}
+	.icon {
+		width: 21%;
+		background-color: #fff;
+		padding: 10px 12px;
+		margin: 10px;
+		box-shadow:2px 2px 8px -2px rgba(20%,20%,40%,0.4);
+		transition: transform .5s;
+	}
+	.icon:hover {
+		transform: translateY(-10px);
+		box-shadow:2px 2px 16px -4px rgba(20%,20%,40%,0.4);
+	}
+	/*.icon img {
+		width: 100%  !important;
+		height: auto;
+	}*/
+	.iconimg {
+		width: 100px;
+		height: 100px;
+		margin: 0 auto;
+		background-size: cover;
+		background-repeat: no-repeat;
+		transition: all 0.5s;
+		margin-bottom: 10px;
+	}
+	.first-item .iconimg {
+		background-image: url(http://download.t-tech.com.tw/userfiles/27760799/image/Commando_icon1.png);
+	}
+	.second-item .iconimg {
+		background-image: url(http://download.t-tech.com.tw/userfiles/27760799/image/Commando_icon2.png);
+	}
+	.third-item .iconimg {
+		background-image: url(http://download.t-tech.com.tw/userfiles/27760799/image/Commando_icon3.png);
+	}
+	.fourth-item .iconimg {
+		background-image: url(http://download.t-tech.com.tw/userfiles/27760799/image/Commando_icon4.png);
+	}
+	.icon h2 {
+		color: #153266;
+		font-weight: bold;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+	.icon p {
+		font-size: 18px;
+		line-height: 30px;
+		color: #595757;
+	}
+
+	@media only screen and (max-width: 768px) {
+		.icon {
+			width: 40%  !important;
+		}
+	}
+	@media only screen and (max-width: 500px) {
+		.icon {
+			width: 100%  !important;
+		}
+	}
+
+	/* program */
+	.program .item {
+		display: flex;
+		align-items: center;
+		margin-bottom: 50px;
+	}
+	.program .item .pic {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: flex-start;
+		position: relative;
+		z-index: 2;
+	}
+	.program .item .pic img {
+		
+	}
+	.program .item .txt {
+		width:55%;
+		flex-shrink: 0;
+		padding: 50px 30px ;
+		box-sizing: border-box;
+		position: relative;
+		z-index: 1;
+	}
+	.program .item > :first-child {
+		margin-right: -20%;
+	}
+	.program .item:nth-child(1) .txt {
+		background-color: rgba(246, 181, 67, .8);
+	}
+	.program .item:nth-child(1) .txt img {
+		position: absolute;
+		right: -25px;
+		top: -15px;
+		width: 15%;
+		overflow: hidden;
+	}
+	.program .item:nth-child(1) .txt h2 {
+		display: inline-block;
+		color: #fff;
+		font-weight: bold;
+		background-color:#f08b1f;
+		padding: 6px 10px;
+		margin-bottom: 10px;
+	}
+	.program .item:nth-child(1) .txt h3 {
+		display: inline-block;
+		color: #153266;
+		font-weight: bold;
+		margin-left: 10px;
+	}
+	.program .item:nth-child(1) .txt span {
+		color: red;
+		font-weight: bold;
+		border-bottom: 1px solid red;
+	}
+
+	/* footer */
+	footer .wrap p {
+		background-color: #142345;
+		color: #fff;
+		padding: 8px 20px;
+		text-align: center;
+	}
+
+	@media only screen and (max-width: 600px) {
+		.titlewrap img {
+			width: 100% !important;
+            height: 100px !important;
+		}
+		.top_banner .wrap img:not(:nth-child(3)) {
+			display: none;
+		}
+		.top_banner .wrap img:nth-child(3) {
+			width: 90vw !important;
+		}
+		.right-image {
+			margin-top: 0;
+		}
+		.right-image .wrap {
+			display: flex;
+			flex-direction: column-reverse;
+			flex-wrap: nowrap;
+			justify-content: center;
+		}
+		.right-image .wrap div:nth-child(2) {
+			
+		}
+        .right-image img {
+			max-width: 500px !important;
+		}
+		/*.right-image p {
+			display: inline-block;
+		}
+		.primary-button {
+			display: inline-block;
+		}*/
+		.services {
+			margin: 0;
+		}
+		.service-item {
+			width: 100vw;
+		}
+		.program .item {
+			flex-direction: column;
+            margin: 0;
+		}
+        .program .item .pic {
+			justify-content: center;
+		}
+		.program .item .pic img:nth-child(1), .program .item .pic img:nth-child(3) {
+			width:30% !important;
+            height: 30% !important;
+		}
+        .program .item .pic img:nth-child(2) {
+			width:50% !important;
+            height: 50% !important;
+		}
+		.program .item .txt {
+			width:100%;
+			flex-shrink: 1;
+		}
+		.program .item:nth-child(1) .txt img {
+			position: absolute;
+			right: 10px;
+			top: 10px;
+			width: 22%;
+		}
+		.program .item > :first-child {
+			margin-right: 0;
+            margin-bottom: -30px;
+		}
+	}
+	</style>
+</head>
+<body>
+<div class="container_acronis">
+	<div class="top_banner">
+		<div class="titlewrap">
+			<img alt="" src="http://download.t-tech.com.tw/userfiles/27760799/image/Acronis-title.png" style="width: 50%;height: auto;" />
+		</div>
+		
+		<div class="wrap">
+			<img alt="" data-aos="fade-up" data-aos-delay="1200" src="http://download.t-tech.com.tw/userfiles/27760799/image/character-top-2.png" style="width: 15%;" /> 
+			<img alt="" data-aos="fade-up" data-aos-delay="800" src="http://download.t-tech.com.tw/userfiles/27760799/image/character-top-3.png" style="width: 15%;" /> 
+			<img alt="" data-aos="fade-up" data-aos-delay="400" src="http://download.t-tech.com.tw/userfiles/27760799/image/character-top-1.png" style="width: 30%;" /> 
+			<img alt="" data-aos="fade-up" data-aos-delay="800" src="http://download.t-tech.com.tw/userfiles/27760799/image/character-top-4.png" style="width: 15%;" /> 
+			<img alt="" data-aos="fade-up" data-aos-delay="1200" src="http://download.t-tech.com.tw/userfiles/27760799/image/character-top-5.png" style="width: 10%;" />
+		</div>
+	</div>
+
+<section class="right-image">
+	<div class="wrap">
+		<div>
+			<h4 class="title-border">新世代備份解決方案優勢出擊</h4>
+			<p><strong>來勢洶洶的疫情造成產業衝擊，也加速數位化的轉型，越來越多的遠距<br />
+			辦公讓員工不在公司內網環境工作，企業要如何確保機密資訊安全？<br />
+			因應現今更複雜的資安威脅，【安克諾斯特攻隊】2.0養精蓄銳再次出擊～<br />
+			協助企業有效抵禦加密勒索，保護企業資料安全，提昇資安防護能力。</strong></p>
+		</div>
+
+		<div class="wrap_img">
+			<img alt="" src="http://download.t-tech.com.tw/userfiles/27760799/image/Acronis Backup.png" />
+		</div>
+	</div>
+</section>
+
+<section>
+	<div class="wrapicon">
+		<div class="icon first-item">
+			<div class="iconimg">&nbsp;</div>
+			<h2>自訂儀表板管理</h2>
+			<p>通過可從任何地方訪問的直觀界面，保護一切&mdash;照片，文件，應用程序，系統以及所使用的設備</p>
+		</div>
+
+		<div class="icon second-item">
+			<div class="iconimg">&nbsp;</div>
+			<h2>立即復原</h2>
+			<p>通過我們獨特的runVM技術，在管理您的恢復時間目標（RTO）並將過程中斷最小化到幾秒鐘的同時，還能保持公司的整體生產力。</p>
+		</div>
+
+		<div class="icon third-item">
+			<div class="iconimg">&nbsp;</div>
+			<h2>主動防禦加密勒索</h2>
+			<p>通過主動保護文件免受未經授權的修改和/或加密，避免停機。Acronis Active Protection使用人工智能和機器學習技術以及白名單來保護您的數據安全。</p>
+		</div>
+
+		<div class="icon fourth-item">
+			<div class="iconimg">&nbsp;</div>
+			<h2>虛擬伺服器保護</h2>
+			<p>通過基於區塊鏈的創新性Acronis Notary技術確保數據完整性，該技術可通過針對存檔文件的攻擊來防止損壞或篡改文件。</p>
+		</div>
+	</div>
+</section>
+
+<p style="text-align: right;">即日起至2021/3/31止</p>
+<hr style="margin: 20px 0;" />
+<section class="program">
+	<div class="wrap">
+		<div class="item">
+			<div class="pic">
+				<img alt="" data-aos="fade-left" data-aos-delay="800" src="http://download.t-tech.com.tw/userfiles/27760799/image/character-top-3.png" style="width: 18%;" /> 
+				<img alt="" data-aos="fade-up" data-aos-delay="400" src="http://download.t-tech.com.tw/userfiles/27760799/image/character-top-1.png" style="width: 30%;" /> 
+				<img alt="" data-aos="fade-right" data-aos-delay="800" src="http://download.t-tech.com.tw/userfiles/27760799/image/character-top-4.png" style="width: 22%;" />
+			</div>
+			<div class="txt">
+				<img src="http://download.t-tech.com.tw/userfiles/27760799/image/active_appraise.png" alt="">
+				<h2>企業用戶專屬優惠</h2>
+				<h3>特攻隊 2.0 優惠出擊</h3>
+				<p>因活動佳評如潮，湛揚科技與您站在同一陣線共渡疫情難關，專案優惠期間延長至<span>2021/3/31</span>，優惠期間訂購幾套伺服器備份授權，
+				<span>就送您幾套工作站備份授權</span>，保護伺服器及重要電腦，共同抵禦加密勒索！
+				</p>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer>
+	<div class="wrap">
+		<p>備份還原選擇最強戰鬥力的安克諾斯特攻隊，用最經濟的方案獲得最強大的資安防禦力。<br />
+		如您對安克諾斯想瞭解更多，我們提供詳細產品介紹及免費測試，歡迎洽詢湛揚科技業務代表。</p>
+	</div>
+</footer>
+</div>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><script>
+	AOS.init({
+       easing: 'ease-in-out-sine'
+    });
+</script>
+</body>
+</html>
